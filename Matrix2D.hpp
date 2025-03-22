@@ -9,6 +9,11 @@ private:
 public:
     Matrix2D(int y, int x) : rows_(y), cols_(x), data_(std::make_unique<T[]>(x * y)) {}
 
+    T* operator[](int i) {
+        assert(i >= 0 && i < rows_);
+        return &data_[i * cols_];
+    }
+
     T& at(int i, int j) {
         assert(i < rows_ && j < cols_ && i >= 0 && j >= 0);
         return data_[i * cols_ + j];

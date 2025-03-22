@@ -20,6 +20,7 @@ int main() {
         std::cout << '\n';
     }
 
-    std::cout << arr.at(2, 2);
+    std::cout << arr.at(2, 3) << '\n';
+    std::cout << arr[2][3] << '\n';
     return 0;
 }
