@@ -7,7 +7,7 @@ private:
     std::unique_ptr<T[]> data_;
 
 public:
-    Matrix2D(int y, int x) : rows_(y), cols_(x), data_(std::make_unique<T[]>(x * y)) {}
+    Matrix2D(int x, int y) : rows_(y), cols_(x), data_(std::make_unique<T[]>(x * y)) {}
 
     T* operator[](int i) {
         assert(i >= 0 && i < rows_);
