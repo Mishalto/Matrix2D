@@ -19,6 +19,11 @@ public:
         return data_[i * cols_ + j];
     }
 
+    T& at(int i) {
+        return data_[i];
+    }
+
     int rows() const { return rows_; }
     int cols() const { return cols_; }
+    int size() const { return rows_ * cols_; }
 };
